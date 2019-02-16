@@ -12,6 +12,8 @@ public:
 	void setSecond(T newVal);
 	T getFirst();
 	T getSecond();
+
+
 	T *next;
 private:
 	T first;

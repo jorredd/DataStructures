@@ -25,8 +25,9 @@ protected:
 template<class T>
 LinkedList<T>::LinkedList(T *node)
 {
-	T ref = *node;
-	this->head = &ref;
+	T *ref;
+	ref = node;
+	this->head = ref;
 	node->next = NULL;
 }
 
@@ -41,51 +42,26 @@ LinkedList<T>::LinkedList()
 template<class T>
 void LinkedList<T>::front(T *node)
 {
-	//Head is defined in the private data
-	//section of the class
-	if (this->head == NULL)
-	{
+	//T *tmp = new T();
+	//this->head = 
+	//tmp->next = this->next;
 
-		T ref = &node;
-		this->head = node;
-		ref.next = this->next;
-		//create bew bide
-		T *tmp;
-		tmp = node;
-		node.next = this->next;
-	}
-	else
-	{
+	
+	T *p = this->head;
 
+	T *ref;
+	ref = node;
+	ref->next = p;
 
-		
-	}
+	p = ref;
+	
+
+	
 
 }
 template<class T>
 void LinkedList<T>::rear(T *node)
 {
-	//Head is defined in the private data
-	//Set p equal to the head
-//section of the class
-	if (head == NULL)
-	{
-		head = node;
-	}
-	else
-	{
-		T *pointer = this->head;
-
-		while (pointer->next != NULL)
-		{
-			pointer = pointer->next;
-		}
-
-		//Create the new node
-		T *n = new T();
-		n->data = node;
-		n->next = NULL;
-	}
 
 }
 template<class T>
