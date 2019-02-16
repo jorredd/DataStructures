@@ -1,0 +1,28 @@
+﻿  main.cpp
+c:\users\jredd\source\repos\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(48): error C2440: 'initializing': cannot convert from 'T **' to 'Pair<int>'
+          with
+          [
+              T=Pair<int>
+          ]
+  c:\users\jredd\source\repos\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(48): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+  c:\users\jredd\source\repos\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(42): note: while compiling class template member function 'void LinkedList<Pair<int>>::front(T *)'
+          with
+          [
+              T=Pair<int>
+          ]
+  c:\users\jredd\source\repos\project 2  - generics and templates\project 2  - generics and templates\main.cpp(21): note: see reference to function template instantiation 'void LinkedList<Pair<int>>::front(T *)' being compiled
+          with
+          [
+              T=Pair<int>
+          ]
+  c:\users\jredd\source\repos\project 2  - generics and templates\project 2  - generics and templates\main.cpp(19): note: see reference to class template instantiation 'LinkedList<Pair<int>>' being compiled
+c:\users\jredd\source\repos\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(50): error C2440: '=': cannot convert from 'T *' to 'T *'
+          with
+          [
+              T=Pair<int>
+          ]
+          and
+          [
+              T=int
+          ]
+  c:\users\jredd\source\repos\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(50): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
