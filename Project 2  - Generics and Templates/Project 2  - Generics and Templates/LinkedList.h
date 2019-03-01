@@ -50,11 +50,11 @@ void LinkedList<T>::front(T *node)
 	T *p = this->head;
 
 	T *ref;
-	ref = node;
-	ref->next = p;
+	ref = &node;
+	p->next = ref;
 
-	p = ref;
-	
+	/*p = ref;
+	*/
 
 	
 

@@ -1,3 +1,28 @@
 ﻿  main.cpp
-c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\main.cpp(20): warning C4930: 'LinkedList<Pair<int>> emptyList(void)': prototyped function not called (was a variable definition intended?)
-  Project 2  - Generics and Templates.vcxproj -> C:\Users\jredd\source\repos\git\DataStructures\Project 2  - Generics and Templates\Debug\Project 2  - Generics and Templates.exe
+c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(53): error C2440: '=': cannot convert from 'T **' to 'T *'
+          with
+          [
+              T=Pair<int>
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(53): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(44): note: while compiling class template member function 'void LinkedList<Pair<int>>::front(T *)'
+          with
+          [
+              T=Pair<int>
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\main.cpp(22): note: see reference to function template instantiation 'void LinkedList<Pair<int>>::front(T *)' being compiled
+          with
+          [
+              T=Pair<int>
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\main.cpp(19): note: see reference to class template instantiation 'LinkedList<Pair<int>>' being compiled
+c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(54): error C2440: '=': cannot convert from 'T *' to 'T *'
+          with
+          [
+              T=Pair<int>
+          ]
+          and
+          [
+              T=int
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 2  - generics and templates\project 2  - generics and templates\linkedlist.h(54): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
