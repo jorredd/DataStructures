@@ -4,4 +4,4 @@ AFTER THAT I CAN USE A STACK() TO COMPARE AGAINST THE QUEUE..
 
 EXAMPLE: Stack.pop() == Queue.dequeue();
 
-This will compare the beggining of the strings with the end of the strings because of the nature of the FILO FIFO
+This will compare the beggining of the strings with the end of the strings because of the nature of the FILO FIFO.
