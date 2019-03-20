@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-//test to see if commit are working proerlly
+
 
 using std::string;
 
@@ -37,7 +37,7 @@ LinkedList<T>::LinkedList()
 	this->head = tmp;
 	tmp->next = NULL;
 }
-
+//Function with the most issues... Failing to set the pointer
 template<class T>
 void LinkedList<T>::front(T *node)
 {
@@ -45,20 +45,21 @@ void LinkedList<T>::front(T *node)
 	//section of the class
 	if (this->head == NULL)
 	{
-
-		T ref = &node;
-		this->head = node;
-		ref.next = this->next;
-		//create bew bide
-		T *tmp;
-		tmp = node;
-		node.next = this->next;
+		head = node;
+		head->next = NULL;
 	}
 	else
 	{
 
+		pointer = head;
 
+		node->next = pointer; // This was basically the biggest issue for me. "= cannot convert from T * TO t *" perhaps i should have overloaded this operator.
+		this->head = node;
 		
+
+
+
+
 	}
 
 }
