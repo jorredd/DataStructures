@@ -9,8 +9,9 @@ const int FULL = STACKMAX - 1;
 class Stack
 {
 private:
+	//Index
 	int top;
-	//int count;
+	int count;
 	int stackArray[STACKMAX];
 
 public:

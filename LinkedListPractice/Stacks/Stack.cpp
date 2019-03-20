@@ -3,8 +3,9 @@
 #include <string>
 
 Stack::Stack()
-	:top(EMPTY) /*, count(top++)*/
+	:top(EMPTY)
 {
+	this->count = top + 1;
 }
 bool Stack::empty()
 {
@@ -23,7 +24,7 @@ bool Stack::push(int element)
 	}
 
 	this->stackArray[++top] = element;
-	//this->count++;
+	this->count++;
 	return true;
 }
 int Stack::pop()
