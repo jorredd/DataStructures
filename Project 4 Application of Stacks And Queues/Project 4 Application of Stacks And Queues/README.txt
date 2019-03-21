@@ -5,3 +5,10 @@ AFTER THAT I CAN USE A STACK() TO COMPARE AGAINST THE QUEUE..
 EXAMPLE: Stack.pop() == Queue.dequeue();
 
 This will compare the beggining of the strings with the end of the strings because of the nature of the FILO FIFO.
+
+
+
+NEW
+
+
+I WILL NEED TO ENQUEUE THE QUEUE TO INSERT INTO THE STACK SO THAT THEY ARE OPPOSITES

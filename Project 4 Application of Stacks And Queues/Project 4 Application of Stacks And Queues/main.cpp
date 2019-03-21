@@ -12,10 +12,11 @@ using std::getline;
 
 template <class T>
 void log(T say);
-
 void log(char say);
 
-string readFile(string fileName);
+//string readFile(string fileName);
+void parseFile(string fileName, List<string> *lines = nullptr);
+
 int main()
 {
 	// What i need to do for the project... Grab from the file and parse through the strings akin to this;
@@ -23,21 +24,19 @@ int main()
 	char grab = test[1];
 	cout << grab << endl;
 
-	List *obj = new List();
+	List<string> *obj = new List<string>();
 
+	parseFile("pal", obj);
 
-	obj->addNode("this");
-	obj->addNode("that");
-	obj->addNode("pattywack!");
 	obj->printList();
 	log("===================================");
-	string payload = readFile("pal");
-	log("===================================");
-	log(payload.at(16));
+	obj->printListBackwards();
 
 	return 0;
 }
-string readFile(string fileName)
+
+//displays contents of a file if given file name and adds file to list if given a List object
+void parseFile(string fileName, List<string> *lines)
 {
 	#include <istream>
 	#include <ostream>
@@ -51,16 +50,17 @@ string readFile(string fileName)
 		exit(-1);
 	}
 
-	string input;
-
-	while (getline(infile, input))
+	char input[200];
+	while (infile.getline(input, 200))
 	{
-		Queue *content = new Queue();
-		content->enqueue(input);
-		log(input);
+		if (lines != nullptr)
+		{
+			for (int c = 0; c < 200; c++)  input[c] = tolower(input[c]);
+			lines->addNode(input);
+		}
 	}
+	log("File Parsed Successfully");
 	infile.close();
-	return input;
 }
 
 //Helper function. Reduces input for COUTS
