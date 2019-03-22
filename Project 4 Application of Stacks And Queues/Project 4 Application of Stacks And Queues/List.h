@@ -28,9 +28,12 @@ private:
 		//Reference to the Prev Node
 		Node *Prev;
 	};
-	Queue<Node> *Q = new Queue<Node>();
-	Stack<Node> *S = new Stack<Node>();
+	// Queue
+	Queue<Node> *Q = new Queue<Node>(); 
+	// Stack
+	Stack<Node> *S = new Stack<Node>(); 
 	Node *Head = NULL;
+
 public:
 	List();
 
@@ -39,6 +42,8 @@ public:
 	void printList();
 	void printListBackwards();
 	void log(T say);
+	void stacker();
+	T getStrings(T *refQ, T *refS);
 
 	~List();
 };
@@ -65,6 +70,7 @@ void List<T>::addNode(T data)
 
 		//Add to Queue and Stack
 		Q->enqueue(Head);	
+
 	}
 	else
 	{
@@ -88,6 +94,7 @@ void List<T>::addNode(T data)
 
 	    //Add to Queue and Stack
 		Q->enqueue(n);
+	
 	}	
 };
 
@@ -135,12 +142,44 @@ void List<T>::printListBackwards()
 	{
 		log(p->Data);
 		p = p->Prev;
+	
 	}
 }
-//Helper function. Reduces input for COUTS
+template<class T>
+void List<T>::stacker()
+{
+	Node *p = Head;
+	while (p != nullptr && p->Next != NULL)
+	{
+		p = p->Next;
+	}
+
+	while (p != nullptr && p != NULL)
+	{
+
+		S->push(p);
+		p = p->Prev;
+
+	}
+}
+
+template<class T>
+T  List<T>::getStrings(T *refQ, T *refS)
+{
+	T tmpQ = Q->dequeue();
+	Node ref = new Node();
+
+	T tmpS = S->peek(&ref);
+
+	/*refQ = &tmpQ.;
+	refS = &tmpS.Data;*/
+	S->pop();
+	return "success";
+}
+//Helper function. 
 template <class T>
 void List<T>::log(T say)
 {
 	cout << say << endl;
-};
+}
 #endif

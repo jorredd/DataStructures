@@ -16,6 +16,7 @@ void log(char say);
 
 //string readFile(string fileName);
 void parseFile(string fileName, List<string> *lines = nullptr);
+void writeFile(string fileName, List<string> *lines);
 
 int main()
 {
@@ -32,6 +33,10 @@ int main()
 	log("===================================");
 	obj->printListBackwards();
 
+	string *tmpq = new string();
+	string *tmps = new string();
+	obj->getStrings(tmpq,tmps);
+
 	return 0;
 }
 
@@ -46,7 +51,7 @@ void parseFile(string fileName, List<string> *lines)
 	ifstream infile(fileName + ".txt");
 	if (!infile)
 	{
-		cout << "Error opening file for reading" << endl;
+		log("Error opening file for reading");
 		exit(-1);
 	}
 
@@ -59,10 +64,26 @@ void parseFile(string fileName, List<string> *lines)
 			lines->addNode(input);
 		}
 	}
+	lines->stacker();
 	log("File Parsed Successfully");
 	infile.close();
 }
 
+void writeFile(string fileName, List<string> *lines)
+{
+	 //Create an instance of ofstream and open example.txt 
+    ofstream outfile(fileName + ".txt");
+
+    //Make sure the file was opened
+    if(!outfile)
+    {
+        log("Error opening file ");
+        exit(0);
+    }
+
+    //output text to the file
+    outfile << "This text will no be inside of example.txt" << endl;
+}
 //Helper function. Reduces input for COUTS
 template <class T>
 void log(T say)

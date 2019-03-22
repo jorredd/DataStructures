@@ -23,8 +23,9 @@ public:
 	bool full();
 	bool push(T *data);
 	void pop();
-	T peek();
-	void log(T say);
+	bool peek(T &test);
+
+	void log(char say);
 };
 
 
@@ -62,26 +63,29 @@ void Stack<T>::pop()
 {
 	if (this->empty())
 	{
-		log("Empty");
+
 	}
 
 	 this->stackArray[top--];
 }
 template <class T>
-T Stack<T>::peek()
+bool Stack<T>::peek(T &test)
 {
+	T *ptr = test;
 	if (this->empty())
 	{
-		log("Empty");
-		return;
+	
+		//auto test = new T();
+		//return test;
 	}
-
-	return this->stackArray[top];
+	ptr = this->stackArray[top];
+	return true;
 }
 
 //Helper function. Reduces input for COUTS
+
 template <class T>
-void Stack<T>::log(T say)
+void Stack<T>::log(char say)
 {
 	std::cout << say << std::endl;
 };
