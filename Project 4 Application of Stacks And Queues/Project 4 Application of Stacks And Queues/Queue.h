@@ -1,6 +1,9 @@
 #ifndef QUEUE
 #define QUEUE
+#include "Node.h"
+
 #include <string>
+
 #include <iostream>
 
 using std::string;
@@ -12,7 +15,7 @@ const int EMPTY = -1;
 
 
 template <class T>
-class Queue
+class Queue 
 {
 private:
 	T *items[MAXQUEUE];

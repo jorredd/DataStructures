@@ -1,8 +1,11 @@
 #ifndef LIST
 #define LIST
 #pragma once
-#include "Queue.h"
+
+
+#include "Node.h"
 #include "Stack.h"
+#include "Queue.h"
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -16,18 +19,10 @@ using std::cout;
 using std::endl;
 
 template <class T>
-class List 
+class List : public Node<string> , public Stack<Node<string>>, public Queue<Node<string>>
 {
 private:
-	struct Node
-	{
-		//Head
-		T Data;
-		//Reference to Next Node
-		Node *Next;
-		//Reference to the Prev Node
-		Node *Prev;
-	};
+	
 	// Queue
 	Queue<Node> *Q = new Queue<Node>(); 
 	// Stack
@@ -43,7 +38,7 @@ public:
 	void printListBackwards();
 	void log(T say);
 	void stacker();
-	T getStrings(T *refQ, T *refS);
+	T getItems(T *refQ, T *refS);
 
 	~List();
 };
@@ -69,7 +64,8 @@ void List<T>::addNode(T data)
 		Head->Prev = NULL;
 
 		//Add to Queue and Stack
-		Q->enqueue(Head);	
+		enqueue(Head);
+		//Q->enqueue(Head);	
 
 	}
 	else
@@ -93,7 +89,8 @@ void List<T>::addNode(T data)
 		n->Prev = p;
 
 	    //Add to Queue and Stack
-		Q->enqueue(n);
+		enqueue(Head);
+		//Q->enqueue(n);
 	
 	}	
 };
@@ -157,23 +154,19 @@ void List<T>::stacker()
 	while (p != nullptr && p != NULL)
 	{
 
-		S->push(p);
+		push(p);
 		p = p->Prev;
 
 	}
 }
 
 template<class T>
-T  List<T>::getStrings(T *refQ, T *refS)
+T  List<T>::getItems(T *refQ, T *refS)
 {
-	T tmpQ = Q->dequeue();
-	Node ref = new Node();
+	//T *ptr = Head->dequeue();
 
-	T tmpS = S->peek(&ref);
+	
 
-	/*refQ = &tmpQ.;
-	refS = &tmpS.Data;*/
-	S->pop();
 	return "success";
 }
 //Helper function. 
