@@ -1,5 +1,7 @@
 #ifndef QUEUE
 #define QUEUE
+
+#include "Node.h"
 #include <string>
 #include <iostream>
 
@@ -25,7 +27,7 @@ public:
 	bool isEmpty();
 	bool isFull();
 	bool enqueue(T *item);
-    T dequeue();
+	T dequeue();
 	bool peek();
 
 	void log(T say);
@@ -64,9 +66,9 @@ T Queue<T>::dequeue()
 {
 	T *item = this->items[head];
 	this->head = (this->head + 1) % MAXQUEUE;
-	
 
-	return *item;
+
+	return item;
 }
 template <class T>
 bool Queue<T>::peek()
