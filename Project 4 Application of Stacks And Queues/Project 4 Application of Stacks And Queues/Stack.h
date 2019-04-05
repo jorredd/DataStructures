@@ -1,10 +1,11 @@
 #ifndef STACK
 #define STACK
+
+#include "Node.h"
+#include "Queue.h"
 #include <string>
-#include <iostream>
-
-
-//const int EMPTY = -1;
+using std::string;
+const int EMPTYY = -1;
 const int STACKMAX = 100;
 const int FULL = STACKMAX - 1;
 
@@ -23,7 +24,7 @@ public:
 	bool full();
 	bool push(T *data);
 	void pop();
-	bool peek(T &test);
+	T peek();
 
 	void log(char say);
 };
@@ -31,14 +32,14 @@ public:
 
 template <class T>
 Stack<T>::Stack()
-	:top(EMPTY)
+	:top(EMPTYY)
 {
 	this->count = top + 1;
 }
 template <class T>
 bool Stack<T>::empty()
 {
-	return this->top == EMPTY ? true : false;
+	return this->top == EMPTYY ? true : false;
 }
 template <class T>
 bool Stack<T>::full()
@@ -69,17 +70,18 @@ void Stack<T>::pop()
 	 this->stackArray[top--];
 }
 template <class T>
-bool Stack<T>::peek(T &test)
+T Stack<T>::peek()
 {
-	T *ptr = test;
-	if (this->empty())
-	{
+	//
+	//if (this->empty())
+	//{
+	//	
+	//	//auto test = new T();
+	//	return  ptr2;
+	//}
+
+	 return this->stackArray[top];
 	
-		//auto test = new T();
-		//return test;
-	}
-	ptr = this->stackArray[top];
-	return true;
 }
 
 //Helper function. Reduces input for COUTS

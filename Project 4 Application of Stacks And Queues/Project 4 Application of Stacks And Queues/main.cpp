@@ -3,6 +3,7 @@
 #include "Queue.h"
 #include <iostream>
 #include <string>
+//#include "Node.h"
 
 using std::string;
 using std::cout;
@@ -32,10 +33,9 @@ int main()
 	obj->printList();
 	log("===================================");
 	obj->printListBackwards();
-
-	string *tmpq = new string();
-	string *tmps = new string();
-	obj->getStrings(tmpq,tmps);
+	string *sptr = new string();
+		string *ssptr = new string();
+	obj->getItems(sptr, ssptr);
 
 	return 0;
 }
