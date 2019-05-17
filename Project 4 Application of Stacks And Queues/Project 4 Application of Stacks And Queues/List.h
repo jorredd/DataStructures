@@ -19,15 +19,15 @@ using std::cout;
 using std::endl;
 
 template <class T>
-class List : public Node<string> , public Stack<Node<string>>, public Queue<Node<string>>
+class List : public Node<T> , public Stack<Node<T>>, public Queue<Node<T>>
 {
 private:
 	
 	// Queue
-	Queue<Node> *Q = new Queue<Node>(); 
+	Queue<Node<T>> *Q = new Queue<Node<T>>(); 
 	// Stack
-	Stack<Node> *S = new Stack<Node>(); 
-	Node *Head = NULL;
+	Stack<Node<T>> *S = new Stack<Node<T>W>(); 
+	Node<T> *Head = NULL;
 
 public:
 	List();

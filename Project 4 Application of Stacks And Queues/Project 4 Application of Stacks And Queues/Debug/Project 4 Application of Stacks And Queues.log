@@ -1,3 +1,77 @@
 ﻿  main.cpp
-main.obj : error LNK2019: unresolved external symbol "public: __thiscall Node<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::Node<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??0?$Node@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@QAE@XZ) referenced in function "public: __thiscall List<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::List<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??0?$List@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@QAE@XZ)
-C:\Users\jredd\source\repos\git\DataStructures\Project 4 Application of Stacks And Queues\Debug\Project 4 Application of Stacks And Queues.exe : fatal error LNK1120: 1 unresolved externals
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(29): error C2146: syntax error: missing '>' before identifier 'W'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(47): note: while compiling class template member function 'List<std::string>::List(void)'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\main.cpp(29): note: see reference to function template instantiation 'List<std::string>::List(void)' being compiled
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\main.cpp(29): note: see reference to class template instantiation 'List<std::string>' being compiled
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(29): error C2440: 'initializing': cannot convert from 'unknown-type *' to 'Stack<Node<T>> *'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(29): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(29): error C2439: 'List<std::string>::S': member could not be initialized
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(29): note: see declaration of 'List<std::string>::S'
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(61): error C2512: 'Node': no appropriate default constructor available
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(57): note: while compiling class template member function 'void List<std::string>::addNode(T)'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\main.cpp(64): note: see reference to function template instantiation 'void List<std::string>::addNode(T)' being compiled
+          with
+          [
+              T=std::string
+          ]
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(67): error C3861: 'enqueue': identifier not found
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(67): note: 'enqueue': function was not declared in the template definition context and can be found only via argument-dependent lookup in the instantiation context
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(74): error C2440: 'initializing': cannot convert from 'Node<T> *' to 'Node *'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(74): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(77): error C2512: 'Node': no appropriate default constructor available
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(85): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(85): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(88): error C2440: '=': cannot convert from 'Node *' to 'Node<T> *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(88): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(89): error C2440: '=': cannot convert from 'Node *' to 'Node<T> *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(89): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(92): error C3861: 'enqueue': identifier not found
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(92): note: 'enqueue': function was not declared in the template definition context and can be found only via argument-dependent lookup in the instantiation context
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(120): error C2440: 'initializing': cannot convert from 'Node<T> *' to 'Node *'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(120): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(119): note: while compiling class template member function 'void List<std::string>::printList(void)'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\main.cpp(33): note: see reference to function template instantiation 'void List<std::string>::printList(void)' being compiled
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(124): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(124): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(132): error C2440: 'initializing': cannot convert from 'Node<T> *' to 'Node *'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(132): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(131): note: while compiling class template member function 'void List<std::string>::printListBackwards(void)'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\main.cpp(35): note: see reference to function template instantiation 'void List<std::string>::printListBackwards(void)' being compiled
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(135): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(135): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(141): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(141): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(148): error C2440: 'initializing': cannot convert from 'Node<T> *' to 'Node *'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(148): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(147): note: while compiling class template member function 'void List<std::string>::stacker(void)'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\main.cpp(67): note: see reference to function template instantiation 'void List<std::string>::stacker(void)' being compiled
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(151): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(151): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(157): error C3861: 'push': identifier not found
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(157): note: 'push': function was not declared in the template definition context and can be found only via argument-dependent lookup in the instantiation context
+c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(158): error C2440: '=': cannot convert from 'Node<T> *' to 'Node *'
+  c:\users\jredd\source\repos\git\datastructures\project 4 application of stacks and queues\project 4 application of stacks and queues\list.h(158): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast

@@ -19,14 +19,12 @@ public:
 	Node *Prev;
 
 
-
-	T returnData() {
-		return this->Data;
-	}
-
-	Node();
-
-
-
 };
+template <class T>
+T returnData() {
+	return this->Data;
+}
+
+
+
 #endif
